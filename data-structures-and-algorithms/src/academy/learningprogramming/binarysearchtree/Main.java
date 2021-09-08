@@ -87,7 +87,6 @@ public class Main {
 		System.out.println("Printing traverserPreOrder");
 		intTree.traversePreOrder();
 		System.out.println();
-		
 	}
 
 }

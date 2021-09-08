@@ -29,23 +29,29 @@ class Parser {
 			
 			if (charAt == '{' || charAt == '(') {
 				stack.push(charAt);
+				System.out.println(stack.toString());
 				continue;
 			}
 			
 			if (charAt == '}' && !stack.isEmpty() && stack.peek() == '{') {
 				stack.pop();
+				System.out.println(stack.toString());
 				continue;
 			}
 			
 			if (charAt == ')' && !stack.isEmpty() && stack.peek() == '(') {
 				stack.pop();
+				System.out.println(stack.toString());
 				continue;
 			}
 			
 			if (charAt == '}' || charAt == ')') {
 				stack.push(charAt);
+				System.out.println(stack.toString());
 				continue;
 			}
+			
+			System.out.println(stack.toString());
 		}
         	
         

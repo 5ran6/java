@@ -38,7 +38,7 @@ public class Codility {
 
 		// Example test: [-1, -3] The smallest is: -2
 		// int a[] = { -1, -3 };
-		solution(a);
+		System.out.println(solution(a));
 	}
 
 	public static int solution(int[] A) {
@@ -46,6 +46,7 @@ public class Codility {
 				.collect(Collectors.toList());
 
 		Integer max = arraySorted.get(arraySorted.size() - 1);
+		System.out.println("Max: " + max);
 
 		while (true) {
 			boolean contains = arraySorted.contains(max);

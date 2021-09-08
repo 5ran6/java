@@ -21,35 +21,35 @@ package academy.learningprogramming.binarysearch;
 public class Main {
 
 	public static void main(String[] args) {
-		int[] intArray = { -22, -15, 1, 7, 20, 35, 55 };
+		int[] input = { -22, -15, 1, 7, 20, 35, 55 };
 
-		System.out.println(binarySearch(intArray, -15));
-		System.out.println(binarySearch(intArray, 35));
-		System.out.println(binarySearch(intArray, 888));
-		System.out.println(binarySearch(intArray, 1));
+		System.out.println(binarySearch(input, -15));
+		System.out.println(binarySearch(input, 35));
+		System.out.println(binarySearch(input, 888));
+		System.out.println(binarySearch(input, 1));
 		
 		System.out.println("-------------------------");
-		System.out.println(binarySearchRecursive(intArray, -15));
-		System.out.println(binarySearchRecursive(intArray, 35));
-		System.out.println(binarySearchRecursive(intArray, 888));
-		System.out.println(binarySearchRecursive(intArray, 1));
+		System.out.println(binarySearchRecursive(input, -15));
+		System.out.println(binarySearchRecursive(input, 35));
+		System.out.println(binarySearchRecursive(input, 888));
+		System.out.println(binarySearchRecursive(input, 1));
 		
 	}
 
 	public static int binarySearch(int[] input, int value) {
-		int start = 0;
-		int end = input.length;
+		int left = 0;
+		int right = input.length;
 
-		while (start < end) {
-			int midPoint = (start + end) / 2;
-			System.out.println("midPoint = " + midPoint);
+		while (left < right) {
+			int mid = (left + right) / 2;
+			System.out.println("midPoint = " + mid);
 
-			if (input[midPoint] == value) {
-				return midPoint;
-			} else if (input[midPoint] < value) {
-				start = midPoint + 1;
+			if (input[mid] == value) {
+				return mid;
+			} else if (input[mid] < value) {
+				left = mid + 1;
 			} else {
-				end = midPoint;
+				right = mid;
 			}
 		}
 
@@ -60,20 +60,20 @@ public class Main {
 		return binarySearchRecursive(input, 0, input.length, value);
 	}
 
-	private static int binarySearchRecursive(int[] input, int start, int end, int value) {
-		if (start >= end) {
+	private static int binarySearchRecursive(int[] input, int left, int right, int value) {
+		if (left >= right) {
 			return -1;
 		}
 		
-		int midPoint = (start + end) / 2;
-		System.out.println("midPoint = " + midPoint);
+		int mid = (left + right) / 2;
+		System.out.println("midPoint = " + mid);
 		
-		if (input[midPoint] == value) {
-			return midPoint;
-		} else if (input[midPoint] < value) {
-			return binarySearchRecursive(input, midPoint + 1, end, value);
+		if (input[mid] == value) {
+			return mid;
+		} else if (input[mid] < value) {
+			return binarySearchRecursive(input, mid + 1, right, value);
 		} else {
-			return binarySearchRecursive(input, start, midPoint, value);
+			return binarySearchRecursive(input, left, mid, value);
 		}
 	}
 

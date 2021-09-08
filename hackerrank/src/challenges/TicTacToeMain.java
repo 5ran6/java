@@ -26,6 +26,7 @@ public class TicTacToeMain {
 			game.markCoordinates(play);
 			
 			if (game.isGameWon()) {
+				game.printBoard();
 				System.out.println("Player X WIN!!!");
 				input.close();
 				System.exit(0);
@@ -88,8 +89,8 @@ class TicTacToe {
 
 	public boolean markCoordinates(String line) {
 		String[] marks = line.split(" ");
-		Integer rowInt = new Integer(marks[0]);
-		Integer colInt = new Integer(marks[1]);
+		Integer rowInt = Integer.valueOf(marks[0]);
+		Integer colInt = Integer.valueOf(marks[1]);
 
 		if (board[rowInt][colInt] == 'N') {
 			board[rowInt][colInt] = currentPlayer;
@@ -99,6 +100,7 @@ class TicTacToe {
 			} else {
 				currentPlayer = 'X';
 			}
+			
 			return true;
 		}
 

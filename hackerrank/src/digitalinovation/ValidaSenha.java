@@ -19,7 +19,7 @@ public class ValidaSenha {
 	public static void main(String[] args) {
 		String teste1 = "Digital Innovation One";
 		validaSenha(teste1);
-
+		
 		String teste2 = "AbcdEfgh99";
 		validaSenha(teste2);
 

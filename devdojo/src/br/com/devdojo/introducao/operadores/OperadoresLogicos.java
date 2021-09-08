@@ -9,7 +9,12 @@ public class OperadoresLogicos {
 		int idade = 18;
 		float salario = 1000f;
 		
-		System.out.println(idade >= 18 && salario >= 3000);
-		System.out.println(idade >= 18 || salario >= 3000);
+//		System.out.println(idade >= 18 && salario >= 3000);
+//		System.out.println(idade >= 18 || salario >= 3000);
+		
+		System.out.println(false || false);
+		System.out.println(false || true);
+		System.out.println(true || false);
+		System.out.println(true || true);
 	}
 }
