@@ -44,6 +44,8 @@ public class Codility {
 	public static int solution(int[] A) {
 		List<Integer> arraySorted = Arrays.stream(A).distinct().sorted().boxed()
 				.collect(Collectors.toList());
+		
+		System.out.println("arraySorted >>> " + Arrays.toString(arraySorted.toArray()));
 
 		Integer max = arraySorted.get(arraySorted.size() - 1);
 		System.out.println("Max: " + max);

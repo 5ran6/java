@@ -1,4 +1,4 @@
-package com.benefitter.test;
+package challenges;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

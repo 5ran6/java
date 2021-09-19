@@ -1,4 +1,4 @@
-package hackerhank.algorithms;
+package hackerhank.algorithms.easy;
 
 import java.util.Arrays;
 import java.util.List;
