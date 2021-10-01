@@ -19,10 +19,12 @@ public class Class10 {
 		System.out.println(vetor);
 
 		int pos = vetor.find(contact4);
+		System.out.println("Pos >>> " + pos);
+		
 		if (pos > -1) {
 			System.out.println("Elemento existe no vetor");
 		} else {
-			System.out.println("Elemento não existe no vetor");
+			System.out.println("Elemento nï¿½o existe no vetor");
 		}
 
 	}

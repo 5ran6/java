@@ -10,6 +10,8 @@ public class Exe2 {
 		list.addElement("B");
 		list.addElement("A");
 		System.out.println(list.lastIndexOf("B"));
+		System.out.println(list.lastIndexOf("A"));
+		System.out.println(list);
 	}
 
 }

@@ -7,8 +7,8 @@ public class Class24 {
 	public static void main(String[] args) {
 		QueuePriority<Integer> queue = new QueuePriority<Integer>();
 		queue.queue(1);
-		queue.queue(3);
 		queue.queue(2);
+		queue.queue(3);
 		System.out.println(queue);
 	}
 
