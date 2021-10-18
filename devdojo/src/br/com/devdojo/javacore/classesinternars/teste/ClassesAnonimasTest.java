@@ -9,19 +9,22 @@ import br.com.devdojo.javacore.generics.Carro;
 
 class Animal {
 	public void andar() {
-		System.out.println("Andando");
+		System.out.println("Andando normalmente...");
 	}
 }
 
 public class ClassesAnonimasTest {
 	
 	public static void main(String[] args) {
-		Animal animal = new Animal() {
+		Animal animal = new Animal();
+		animal.andar();
+		
+		Animal animalAnonimo = new Animal() {
 			public void andar() {
 				System.out.println("Andando anonimamente...");
 			}
 		};
-		animal.andar();
+		animalAnonimo.andar();
 		
 		List<Carro> lsCarro = new ArrayList<>();
 		lsCarro.add(new Carro("GOL"));

@@ -15,13 +15,17 @@ public class ConcorrenciaDeColecoesTest {
 		
 		Map<String, String> map = new HashMap<>();
 		map.put("1", "1");
+		System.out.println("map >> " + map);
 		map.put("1", "2");
+		System.out.println("map >> " + map);
 		System.out.println(map.get("1"));
 		
 		ConcurrentHashMap<String, String> map2 = new ConcurrentHashMap<>();
 		map2.put("1", "1");
+		System.out.println("map >> " + map);
 		map2.putIfAbsent("1", "2");
-		System.out.println(map2.get("1	"));
+		System.out.println("map >> " + map);
+		System.out.println(map2.get("1"));
 	}
 
 }

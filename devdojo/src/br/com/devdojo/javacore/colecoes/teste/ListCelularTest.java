@@ -1,6 +1,8 @@
 package br.com.devdojo.javacore.colecoes.teste;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import br.com.devdojo.javacore.colecoes.classes.Celular;
@@ -13,9 +15,16 @@ public class ListCelularTest {
 		Celular celular3 = new Celular("Sony Experia", "1234568");
 		
 		List<Celular> celularList = new ArrayList<Celular>();
-		celularList.add(celular1);
 		celularList.add(celular2);
+		celularList.add(celular1);
 		celularList.add(celular3);
+		
+		Collections.sort(celularList, new Comparator<Celular>() {
+			@Override
+			public int compare(Celular c1, Celular c2) {
+				return c2.getNome().compareTo(c1.getNome());
+			}
+		});
 		
 		for (Celular celular : celularList) {
 			System.out.println(celular);

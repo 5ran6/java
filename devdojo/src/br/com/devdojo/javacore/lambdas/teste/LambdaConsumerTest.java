@@ -16,7 +16,7 @@ public class LambdaConsumerTest {
 		forEach(Arrays.asList("Bruno", "Leticia", "Bianca", "Matheus"), (String s) -> System.out.println(s));
 		
 		List<Integer> list = map(Arrays.asList("Bruno", "Leticia", "Bianca", "Matheus"), (String s) -> s.length());
-		System.out.println(list);
+		System.out.println("length >>> " + list);
 		
 		List<Carro> carros = Arrays.asList(new Carro("vermelho", 2011), new Carro("preto", 2019));
 		List<String> listaCoresCarros = map(carros, (Carro carro) -> carro.getCor());

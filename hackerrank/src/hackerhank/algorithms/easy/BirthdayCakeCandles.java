@@ -2,7 +2,6 @@ package hackerhank.algorithms.easy;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,26 +41,42 @@ public class BirthdayCakeCandles {
 		for (int i = 0; i < candles.size(); i++) {
 			Integer value = candles.get(i);
 			
-			if (map.containsKey(value)) {
-				Iterator<Entry<Integer, Integer>> it = map.entrySet().iterator();
-
-				while (it.hasNext()) {
-					Entry<Integer, Integer> next = it.next();
-
-					if (next.getKey().equals(value)) {
-						map.put(value, next.getValue() + 1);
-						break;
-					}
-				}
-			} else {
+//			if (map.containsKey(value)) {
+//				Iterator<Entry<Integer, Integer>> it = map.entrySet().iterator();
+//
+//				while (it.hasNext()) {
+//					Entry<Integer, Integer> next = it.next();
+//
+//					if (next.getKey().equals(value)) {
+//						map.put(value, next.getValue() + 1);
+//						break;
+//					}
+//				}
+//			} else {
+//				map.put(value, 1);
+//			}
+			
+			if (!map.containsKey(value)) {
 				map.put(value, 1);
+			} else {
+				Integer oldValue = map.get(value);
+				map.put(value, oldValue + 1);
+				
 			}
 		}
 		
 		System.out.println(map);
 
-		LinkedHashMap<Integer, Integer> mapSorted = map.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (v1, v2) -> v1, LinkedHashMap::new));
+		LinkedHashMap<Integer, Integer> mapSorted = 
+				map.entrySet()
+					.stream()
+					.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+					.collect(
+							Collectors
+								.toMap(Map.Entry::getKey, Map.Entry::getValue, (v1, v2) -> v1, LinkedHashMap::new)
+							);
+		
+		System.out.println(mapSorted);
 		
 		Entry<Integer, Integer> next = mapSorted.entrySet().iterator().next();
 		

@@ -57,8 +57,6 @@ public class LambdaMethodReferencesTest {
 		BiFunction<String, Integer, Carro> carroBiFunction = (s, i) -> new Carro(s, i);
 		BiFunction<String, Integer, Carro> carroBiFunction2 = Carro::new;
 		System.out.println(carroBiFunction2.apply("rosa", 1000));
-		
-
 	}
 
 	public static <T> void forEach(List<T> list, Consumer<T> c) {

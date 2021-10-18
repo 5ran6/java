@@ -19,7 +19,7 @@ public class DiagonalDifference {
 		arr.add(Arrays.asList(11, 2, 4));
 		arr.add(Arrays.asList(4, 5, 6));
 		arr.add(Arrays.asList(10, 8, -12));
-//		System.out.println(diagonalDifference(arr));
+		System.out.println(diagonalDifference(arr));
 
 		List<List<Integer>> arr2 = new ArrayList<List<Integer>>();
 		arr2.add(Arrays.asList(6, 6, 7, -10, 9, -3, 8, 9, -1));
@@ -31,7 +31,7 @@ public class DiagonalDifference {
 		arr2.add(Arrays.asList(-2, -7, -4, 8, 3, -1, 8, 2, 3));
 		arr2.add(Arrays.asList(-3, 4, 6, -7, -7, -8, -3, 9, -6));
 		arr2.add(Arrays.asList(-2, 0, 5, 4, 4, 4, -3, 3, 0));
-		System.out.println(diagonalDifference(arr2));
+//		System.out.println(diagonalDifference(arr2));
 
 	}
 

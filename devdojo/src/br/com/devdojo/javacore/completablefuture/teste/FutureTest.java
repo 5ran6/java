@@ -11,11 +11,11 @@ import java.util.concurrent.TimeoutException;
 public class FutureTest {
 	private static ExecutorService executorService = Executors.newFixedThreadPool(1);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws TimeoutException {
 		Future<Double> future = executorService.submit(new Callable<Double>() {
 			@Override
 			public Double call() throws Exception {
-				TimeUnit.SECONDS.sleep(2);
+				TimeUnit.SECONDS.sleep(1);
 				return 2000D;
 			}
 		});
@@ -23,9 +23,9 @@ public class FutureTest {
 		enrolando();
 
 		try {
-//			Double resultado = future.get(3L, TimeUnit.SECONDS);
+//			Double resultado = future.get(10L, TimeUnit.SECONDS);
 			Double resultado = future.get();
-			System.out.println(resultado);
+			System.out.println("Resultado >>> "+ resultado);
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		} finally {
@@ -38,7 +38,7 @@ public class FutureTest {
 		for (int i = 0; i < 1000000; i++) {
 			soma += i;
 		}
-		System.out.println(soma);
+		System.out.println("Soma: " + soma);
 	}
 
 }

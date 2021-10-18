@@ -8,7 +8,7 @@ public class ClassesInternasTest {
 		
 		interna.verClasseExterna();
 		interna2.verClasseExterna();
-		System.out.println(externa.nome);
+		System.out.println("Nome >>> " + externa.nome);
 	}
 
 	private String nome = "Bruno Lima";

@@ -12,9 +12,10 @@ public class CallableTest implements Callable<String> {
 	@Override
 	public String call() throws Exception {
 		int count = ThreadLocalRandom.current().nextInt(1, 11);
+		System.out.println("count >>> " + count);
 		
 		for (int i = 0; i < count; i++) {
-			System.out.println(Thread.currentThread().getName() + " executando...");
+			System.out.println(Thread.currentThread().getName() + ": i >>> " + i + " executando...");
 		}
 		
 		return "Trabalho finalizado, o numero aleatorio é: " + count;

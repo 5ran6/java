@@ -29,11 +29,11 @@ public class SuperReducedString {
 //		String s5 = "b";
 //		System.out.println(superReducedStringV1(s5));
 //		
-//		String s6 = "aaabccddd";
-//		System.out.println(superReducedStringV2(s6));
+		String s6 = "aaabccddd";
+		System.out.println(superReducedStringV2(s6));
 		
-		String s7= "aaabccddd";
-		System.out.println(superReducedStringV3(s7));
+//		String s7= "aaabccddd";
+//		System.out.println(superReducedStringV3(s7));
 	}
 	
 	public static String superReducedStringV1(String s) {
@@ -42,7 +42,10 @@ public class SuperReducedString {
 			int len = s.length();
 			
 			// "(.)" is a capturing group that captures any character
-            // "\\1" is a backreference that will match the character captured by the first capturing group (i.e. the one captured by "(.)")
+			
+            // "\\1" is a backreference that will match the character captured by the first 
+			// capturing group (i.e. the one captured by "(.)")
+			
             s = s.replaceAll("(.)\\1", "");
             
             if (s.length() == len) {

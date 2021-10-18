@@ -27,7 +27,7 @@ public class CarroTest {
 			@Override
 			public boolean test(Carro carro) {
 				
-				return carro.getCor().equals("verde");
+				return carro.getCor().equals("vermelho");
 			}
 		}));
 		

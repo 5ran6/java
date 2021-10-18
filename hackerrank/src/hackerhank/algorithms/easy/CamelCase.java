@@ -34,7 +34,6 @@ public class CamelCase {
 			if (Arrays.binarySearch(charsLettersUpCase, charAt) >= 0) {
 				countCamelCase++;
 			}
-			
 		}
 
 		return countCamelCase;
