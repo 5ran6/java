@@ -33,7 +33,7 @@ public class Memoization {
 	public int memoizeAddTo80(int n) {
 		// Once cached it won't have to add every time the function is called
 		if (!cache.containsKey(n)) {
-			System.out.println("long time");
+			System.out.println("long time memoize");
 			cache.put(n, n + 80);
 		}
 		
